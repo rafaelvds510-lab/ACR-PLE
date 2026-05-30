@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from './Logo';
 import styles from './Header.module.css';
+import InstallPwaButton from './InstallPwaButton';
 
 const Header: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const Header: React.FC = () => {
         </div>
 
         <div className={styles.navActions} style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <InstallPwaButton />
           <a href="/" className={styles.navLink}>Início</a>
           <a href="/login" className={styles.btnSecondary}>Entrar</a>
           <a href="/cadastro" className={styles.btnPrimary}>Começar</a>
