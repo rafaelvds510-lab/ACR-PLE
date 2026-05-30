@@ -24,6 +24,7 @@ export interface MindNodeData {
   borderColor?: string;
   onChange?: (id: string, label: string) => void;
   onAddChild?: (id: string) => void;
+  [key: string]: unknown;
 }
 
 interface MindMapState {

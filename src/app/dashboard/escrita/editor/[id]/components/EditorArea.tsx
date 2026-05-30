@@ -32,10 +32,11 @@ interface EditorAreaProps {
   initialTitle: string;
   template: string;
   isFocusMode: boolean;
+  theme?: string;
 }
 
 export default function EditorArea({
-  writingId, initialContent, initialTitle, template, isFocusMode,
+  writingId, initialContent, initialTitle, template, isFocusMode, theme
 }: EditorAreaProps) {
   const [title, setTitle] = useState(initialTitle);
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved'>('idle');
@@ -111,7 +112,7 @@ export default function EditorArea({
       {!isFocusMode && <Toolbar editor={editor} />}
 
       {editor && (
-        <BubbleMenu editor={editor} tippyOptions={{ duration: 100 }} className={styles.bubbleMenu}>
+        <BubbleMenu editor={editor} className={styles.bubbleMenu}>
           <button
             onMouseDown={e => { e.preventDefault(); editor.chain().focus().toggleBold().run(); }}
             className={`${styles.bubbleBtn} ${editor.isActive('bold') ? styles.bubbleBtnActive : ''}`}

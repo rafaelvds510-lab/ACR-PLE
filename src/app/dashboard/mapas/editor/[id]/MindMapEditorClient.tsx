@@ -14,6 +14,7 @@ import {
   Node,
   ReactFlowProvider,
   Panel,
+  BackgroundVariant,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import dagre from 'dagre';
@@ -236,7 +237,7 @@ function MindMapEditorContent({ mapId }: MindMapEditorClientProps) {
           snapToGrid
           snapGrid={[20, 20]}
         >
-          <Background color="#ccc" variant="dots" />
+          <Background color="#ccc" variant={BackgroundVariant.Dots} />
           <Controls />
           <MiniMap />
         </ReactFlow>

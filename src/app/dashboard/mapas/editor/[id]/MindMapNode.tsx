@@ -4,6 +4,7 @@ import { Handle, Position, NodeProps, Node } from '@xyflow/react';
 export type NodeData = {
   label: string;
   type?: 'rectangle' | 'pill' | 'diamond' | 'circle';
+  textColor?: string;
 };
 
 const MindMapNode = ({ id, data, selected }: NodeProps<Node<NodeData & { onChange?: (id: string, label: string) => void, onAddChild?: (id: string) => void }>>) => {

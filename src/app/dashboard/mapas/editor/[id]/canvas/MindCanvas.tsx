@@ -3,7 +3,7 @@
 import React, { useCallback } from 'react';
 import {
   ReactFlow, Background, Controls, MiniMap,
-  NodeChange, EdgeChange, Node, Edge, SelectionMode,
+  NodeChange, EdgeChange, Node, Edge, SelectionMode, BackgroundVariant,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
@@ -72,14 +72,14 @@ export default function MindCanvas({
       multiSelectionKeyCode="Shift"
       style={{ background: '#F7F7F5' }}
     >
-      <Background color="#C9C9C7" variant="dots" gap={24} size={1.5} />
+      <Background color="#C9C9C7" variant={BackgroundVariant.Dots} gap={24} size={1.5} />
       <Controls
         showInteractive={false}
         style={{ background: '#fff', border: '1px solid #e5e5e5', borderRadius: 8, boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}
       />
       <MiniMap
         nodeColor={n => {
-          const d = n.data as MindNodeData;
+          const d = n.data as unknown as MindNodeData;
           return d.nodeType === 'central' ? '#2c2c2c' : (d.branchColor || '#4ECDC4');
         }}
         maskColor="rgba(247,247,245,0.7)"

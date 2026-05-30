@@ -1,6 +1,6 @@
 import React, { memo, useRef, useEffect } from 'react';
 import { Handle, Position, NodeProps, Node } from '@xyflow/react';
-import { MindNodeData } from '../hooks/useMindMap';
+import { MindNodeData } from '../../hooks/useMindMap';
 
 type MainNodeProps = NodeProps<Node<MindNodeData>>;
 
