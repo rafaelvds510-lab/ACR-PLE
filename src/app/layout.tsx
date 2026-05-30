@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import type { Metadata } from "next";
 import { Cinzel, EB_Garamond, Cinzel_Decorative, Inter } from "next/font/google";
 import "./globals.css";

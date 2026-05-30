@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 // ═══════════════════════════════════════════════
 //  API: /api/recommendations
 //  Motor de recomendações baseado em SRS, histórico

@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import { createClient } from '@/lib/supabase/server';
 import { NextResponse } from 'next/server';
 import { GeminiAgent } from '@/lib/ai/geminiClient';
@@ -112,14 +114,6 @@ CRÍTICO: Se o usuário solicitou ${days} dias, você deve retornar EXATAMENTE $
     } else {
       // Log de depuração para análise
       console.error('AI Response does not contain a JSON array:', aiResponse);
-      // Salva em um arquivo para o desenvolvedor analisar
-      try {
-        const fs = require('fs');
-        const path = require('path');
-        const logPath = path.join(process.cwd(), 'scratch', 'last_ia_fail.txt');
-        if (!fs.existsSync(path.dirname(logPath))) fs.mkdirSync(path.dirname(logPath), { recursive: true });
-        fs.writeFileSync(logPath, `TIMESTAMP: ${new Date().toISOString()}\n\nRESPONSE:\n${aiResponse}`);
-      } catch (e) {}
 
       aiResponse = aiResponse.replace(/```json/g, '').replace(/```/g, '').trim();
     }
