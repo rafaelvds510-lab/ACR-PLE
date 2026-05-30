@@ -1,0 +1,196 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--stone-darker);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.mapCard {
+  background-color: var(--stone-lightest);
+  border: 1px solid var(--stone-light);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mapCard:hover {
+  border-color: var(--neon-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.mapThumb {
+  height: 120px;
+  background: linear-gradient(135deg, #f5f5f3 0%, #ebebea 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--stone-light);
+}
+
+.mapMeta {
+  padding: 14px 16px;
+}
+
+.cardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cardActions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.mapCard:hover .cardActions {
+  opacity: 1;
+}
+
+.iconBtn {
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--stone-medium);
+  transition: all 0.15s;
+}
+
+.iconBtn:hover {
+  background: var(--stone-light);
+  border-color: var(--stone-light);
+}
+
+.renameRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.renameInput {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--neon-accent);
+  border-radius: 6px;
+  padding: 4px 8px;
+  outline: none;
+}
+
+.mapTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--stone-darker);
+}
+
+.mapDate {
+  font-size: 12px;
+  color: var(--stone-medium);
+}
+
+.createBtn {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: 1px solid #000000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.createBtn:hover {
+  background-color: #333333;
+  border-color: #333333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Editor Styles */
+.editorContainer {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 120px);
+  background-color: white;
+  border: 1px solid var(--stone-light);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background-color: var(--stone-lightest);
+  border-bottom: 1px solid var(--stone-light);
+  align-items: center;
+  z-index: 10;
+}
+
+.toolBtn {
+  padding: 8px 12px;
+  background-color: white;
+  border: 1px solid var(--stone-light);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.toolBtn:hover {
+  background-color: var(--stone-light);
+}
+
+.rfContainer {
+  flex: 1;
+  position: relative;
+}
+
+.saveIndicator {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  z-index: 100;
+}

@@ -1,0 +1,134 @@
+.sidebar {
+  width: 280px;
+  background-color: var(--stone-lightest);
+  border: 1px solid var(--stone-light);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--stone-darker);
+  margin-bottom: 8px;
+}
+
+.goalGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.goalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.goalLabel {
+  font-weight: 500;
+  color: var(--stone-dark);
+}
+
+.goalValues {
+  color: var(--stone-medium);
+  font-size: 15px;
+}
+
+.progressBarBg {
+  width: 100%;
+  height: 8px;
+  background-color: var(--stone-light);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease-out;
+}
+
+.sectionDivider {
+  height: 1px;
+  background: var(--marble-dark);
+  margin: 24px 0;
+}
+
+.eventList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.eventMiniCard {
+  display: flex;
+  gap: 12px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--marble-dark);
+}
+
+.eventMiniDate {
+  font-family: var(--font-cinzel), serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold-deep);
+  background: var(--marble-light);
+  padding: 4px;
+  border-radius: 4px;
+  height: fit-content;
+  text-align: center;
+  min-width: 40px;
+}
+
+.eventMiniInfo {
+  flex: 1;
+}
+
+.eventMiniTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.eventMiniTime {
+  font-size: 11px;
+  color: var(--stone);
+}
+
+.noEvents {
+  font-size: 12px;
+  color: var(--stone);
+  font-style: italic;
+  text-align: center;
+}
+
+.resetBtn {
+  width: 100%;
+  background: none;
+  border: 1px solid #d9534f;
+  color: #d9534f;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 0.7;
+}
+
+.resetBtn:hover {
+  background: #d9534f;
+  color: white;
+  opacity: 1;
+}

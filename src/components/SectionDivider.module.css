@@ -1,0 +1,24 @@
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 40px 0;
+  color: var(--gold);
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--marble-deep));
+}
+
+.dividerLine.right {
+  background: linear-gradient(270deg, transparent, var(--marble-deep));
+}
+
+.dividerSymbol {
+  font-family: var(--font-cinzel), serif;
+  font-size: 16px;
+  letter-spacing: 4px;
+  color: var(--gold);
+}

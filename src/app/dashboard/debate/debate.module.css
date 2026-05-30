@@ -1,0 +1,342 @@
+.debateHub {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--marble-deep);
+  padding-bottom: 32px;
+  gap: 24px;
+}
+
+.titleGroup {
+  max-width: 700px;
+}
+
+.title {
+  font-family: var(--font-cinzel), serif;
+  font-size: 32px;
+  color: var(--ink);
+  margin: 12px 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-family: var(--font-eb-garamond), serif;
+  font-size: 18px;
+  color: var(--stone-dark);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.quickActions {
+  display: flex;
+  gap: 16px;
+}
+
+.primaryBtn, .secondaryBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.primaryBtn {
+  background: var(--ink);
+  color: var(--gold-light);
+  border: 1px solid var(--gold-dim);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.primaryBtn:hover {
+  background: var(--ink-soft);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border-color: var(--gold);
+}
+
+.secondaryBtn {
+  background: var(--marble-light);
+  color: var(--ink);
+  border: 1px solid var(--marble-deep);
+}
+
+.secondaryBtn:hover {
+  background: var(--marble);
+  border-color: var(--gold-dim);
+}
+
+/* ── GRID LAYOUT ── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-left: 3px solid var(--gold);
+  padding-left: 16px;
+}
+
+.sectionHeader h2 {
+  font-family: var(--font-cinzel), serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+}
+
+/* ── DEBATE CARDS ── */
+.debateGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.debateCard {
+  background: var(--surface-base);
+  border: 1px solid var(--marble-deep);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.debateCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.debateCard:hover {
+  border-color: var(--gold-dim);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.debateCard:hover::before {
+  opacity: 1;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categoryBadge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--azure-dark);
+  background: var(--azure-light);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.stats {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--stone);
+  align-items: center;
+}
+
+.cardTitle {
+  font-family: var(--font-cinzel), serif;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--ink);
+  min-height: 50px;
+}
+
+.cardBtnLink {
+  margin-top: auto;
+  background: transparent;
+  border: 1px solid var(--marble-deep);
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--stone-dark);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.cardBtnLink:hover {
+  background: var(--ink);
+  color: var(--gold-light);
+  border-color: var(--ink);
+}
+
+/* ── MODAL ── */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: var(--marble);
+  padding: 32px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gold-dim);
+  width: 100%;
+  max-width: 450px;
+  box-shadow: var(--shadow-xl);
+}
+
+.modalTitle {
+  font-family: var(--font-cinzel), serif;
+  font-size: 20px;
+  margin-bottom: 24px;
+  color: var(--ink);
+}
+
+.modalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.modalInput {
+  background: white;
+  border: 1px solid var(--marble-deep);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  outline: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.modalInput:focus {
+  border-color: var(--gold);
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.modalFooter button {
+  background: transparent;
+  border: none;
+  color: var(--stone-dark);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ── FORUM LIST ── */
+.forumList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.forumItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--surface-base);
+  border: 1px solid var(--marble-deep);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+}
+
+.forumItem:hover {
+  border-color: var(--azure-dim);
+  background: var(--marble-light);
+}
+
+.forumIcon {
+  width: 44px;
+  height: 44px;
+  background: var(--azure-light);
+  color: var(--azure);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.forumInfo {
+  flex: 1;
+}
+
+.forumTitle {
+  font-family: var(--font-cinzel), serif;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.forumMeta {
+  font-family: var(--font-eb-garamond), serif;
+  font-size: 14px;
+  color: var(--stone);
+  font-style: italic;
+}
+
+.viewBtn {
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--azure);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.viewBtn:hover {
+  color: var(--azure-dark);
+  text-decoration: underline;
+}

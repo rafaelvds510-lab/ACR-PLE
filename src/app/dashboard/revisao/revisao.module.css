@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--stone-darker);
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--stone-medium);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.card {
+  background-color: var(--stone-lightest);
+  border: 1px solid var(--stone-light);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--stone-darker);
+  margin-bottom: 16px;
+}
+
+.statsRow {
+  display: flex;
+  gap: 16px;
+}
+
+.statBox {
+  flex: 1;
+  background-color: var(--stone-light);
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.statValue {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--neon-accent);
+}
+
+.statLabel {
+  font-size: 14px;
+  color: var(--stone-dark);
+  margin-top: 4px;
+}
+
+.decksList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.deckItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--stone-light);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.deckItem:hover {
+  border-color: var(--neon-accent);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.deckName {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--stone-darker);
+}
+
+.deckInfo {
+  font-size: 13px;
+  color: var(--stone-medium);
+  margin-top: 4px;
+}
+
+.studyBtn {
+  background-color: var(--neon-accent);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.studyBtn:hover {
+  background-color: var(--neon-accent-hover, #2b6bd8);
+}
+
+.studyBtn:disabled {
+  background-color: var(--stone-medium);
+  cursor: not-allowed;
+}
+
+.chartContainer {
+  height: 250px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+  }
+}

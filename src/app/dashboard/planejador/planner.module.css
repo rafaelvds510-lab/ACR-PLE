@@ -1,0 +1,233 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-family: var(--font-cinzel), serif;
+  font-size: 36px;
+  color: var(--ink);
+  margin-bottom: 32px;
+}
+
+.v2 {
+  font-size: 14px;
+  background: var(--gold-deep);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.stepper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.stepIndicator {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--stone);
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: var(--marble-light);
+}
+
+.active {
+  background: var(--gold-light);
+  color: var(--ink);
+}
+
+.stepDivider {
+  width: 40px;
+  height: 1px;
+  background: var(--marble-deep);
+}
+
+/* ── Step Cards ── */
+.stepCard {
+  background: white;
+  border: 1px solid var(--marble-deep);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--shadow-lg);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.cardTitle {
+  font-family: var(--font-cinzel), serif;
+  font-size: 24px;
+  color: var(--ink);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.sourceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.sourceBtn {
+  background: white;
+  border: 2px solid var(--marble-deep);
+  border-radius: 12px;
+  padding: 32px 24px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.sourceBtn:hover {
+  border-color: var(--gold);
+  background: var(--marble-light);
+}
+
+.sourceActive {
+  border-color: var(--gold-deep);
+  background: rgba(201, 168, 76, 0.05);
+}
+
+.sourceIcon { font-size: 40px; display: block; margin-bottom: 16px; }
+.sourceBtn h3 { font-family: var(--font-cinzel), serif; color: var(--ink); margin-bottom: 8px; }
+.sourceBtn p { font-size: 14px; color: var(--stone); line-height: 1.4; }
+
+.extractFields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 16px;
+  border: 1px solid var(--marble-deep);
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  resize: vertical;
+}
+
+.textInput {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--marble-deep);
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.fileBox {
+  background: var(--marble-light);
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--stone-dark);
+}
+
+/* ── Config Grid ── */
+.configGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 14px; color: var(--stone-dark); }
+.field input { padding: 12px; border: 1px solid var(--marble-deep); border-radius: 6px; }
+
+/* ── Preview List ── */
+.previewList {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid var(--marble-light);
+  border-radius: 8px;
+  margin-bottom: 32px;
+  padding: 16px;
+  background: var(--marble-light);
+}
+
+.previewItem {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid var(--marble-deep);
+}
+
+.previewDay {
+  font-family: var(--font-cinzel), serif;
+  font-weight: 700;
+  color: var(--gold-deep);
+  min-width: 60px;
+}
+
+.previewInfo h4 { margin: 0 0 4px; color: var(--ink); }
+.previewInfo p { margin: 0; font-size: 13px; color: var(--stone); line-height: 1.4; }
+
+/* ── Actions ── */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nextBtn, .generateBtn, .confirmBtn {
+  background: var(--ink);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-family: var(--font-cinzel), serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+}
+
+.nextBtn:hover, .generateBtn:hover, .confirmBtn:hover {
+  background: var(--ink-soft);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.backBtn {
+  background: white;
+  border: 1px solid var(--marble-deep);
+  color: var(--stone-dark);
+  padding: 16px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nextBtn:disabled, .generateBtn:disabled, .confirmBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}

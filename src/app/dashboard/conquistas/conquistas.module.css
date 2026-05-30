@@ -1,0 +1,608 @@
+/* conquistas.module.css */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-bottom: 64px;
+}
+
+/* ── Hero ── */
+.heroSection {
+  text-align: center;
+  padding: 40px 0 0;
+}
+
+.heroOrn {
+  font-size: 14px;
+  letter-spacing: 0.4em;
+  color: var(--gold);
+  margin-bottom: 16px;
+  opacity: 0.7;
+}
+
+.heroTitle {
+  font-family: var(--font-cinzel), serif;
+  font-size: 58px;
+  color: var(--ink);
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.heroSub {
+  font-family: var(--font-eb-garamond), serif;
+  font-size: 24px;
+  color: var(--stone);
+  font-style: italic;
+}
+
+/* ── Level Card ── */
+.levelCard {
+  background: linear-gradient(160deg, var(--ink) 0%, var(--ink-soft) 100%);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: 12px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(26, 18, 8, 0.2), inset 0 1px 0 rgba(201, 168, 76, 0.1);
+}
+
+.levelTopLine {
+  position: absolute;
+  top: 0; left: 48px; right: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.levelInner {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.levelIconWrap {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.2) 0%, transparent 70%);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 32px rgba(201, 168, 76, 0.15);
+}
+
+.levelIcon {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.levelInfo {
+  flex: 1;
+}
+
+.levelBadge {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.levelTitle {
+  font-family: var(--font-cinzel), serif;
+  font-size: 32px;
+  color: var(--gold-light);
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+}
+
+.levelTitlePt {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  color: var(--stone);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.levelDesc {
+  font-family: var(--font-eb-garamond), serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(250, 247, 242, 0.7);
+  margin-bottom: 16px;
+}
+
+.levelChallenge {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  color: var(--stone-light);
+  margin-bottom: 16px;
+}
+
+.levelChallenge strong {
+  color: var(--gold-light);
+}
+
+.rewardBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 6px;
+  padding: 10px 16px;
+  flex-wrap: wrap;
+}
+
+.rewardLabel {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--stone);
+  flex-shrink: 0;
+}
+
+.rewardName {
+  font-family: var(--font-cinzel), serif;
+  font-size: 14px;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.rewardDesc {
+  font-family: var(--font-eb-garamond), serif;
+  font-size: 14px;
+  color: var(--stone-light);
+  font-style: italic;
+}
+
+/* XP Column */
+.xpColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 160px;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.xpTotal {
+  font-family: var(--font-cinzel), serif;
+  font-size: 40px;
+  color: var(--gold-light);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.xpLabel {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  color: var(--stone);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+}
+
+.barTrack {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold), var(--gold-light));
+  border-radius: 3px;
+  transition: width 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.xpSub {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  color: var(--stone);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.streakCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.streakFire { font-size: 24px; line-height: 1; }
+
+.streakNum {
+  font-family: var(--font-cinzel), serif;
+  font-size: 22px;
+  color: var(--gold);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.streakLabel {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 10px;
+  color: var(--stone);
+}
+
+/* ── Sections ── */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sectionTitle {
+  font-family: var(--font-cinzel), serif;
+  font-size: 22px;
+  color: var(--ink);
+  border-bottom: 1px solid var(--marble-deep);
+  padding-bottom: 12px;
+  letter-spacing: 0.04em;
+}
+
+.sectionSub {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  color: var(--stone);
+  margin-top: -12px;
+}
+
+/* ── Levels Track ── */
+.levelsTrack {
+  display: flex;
+  gap: 0;
+  position: relative;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.trackItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 16px;
+  border-radius: 8px;
+  background: var(--surface-base);
+  border: 1px solid var(--marble-deep);
+  min-width: 140px;
+  flex: 1;
+  position: relative;
+  transition: all 0.3s;
+  opacity: 0.45;
+  filter: grayscale(0.6);
+}
+
+.trackReached {
+  opacity: 1;
+  filter: grayscale(0);
+  border-color: rgba(201, 168, 76, 0.3);
+  background: linear-gradient(160deg, rgba(201, 168, 76, 0.05) 0%, var(--surface-base) 100%);
+}
+
+.trackCurrent {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.2), 0 4px 16px rgba(201, 168, 76, 0.15);
+  transform: translateY(-4px);
+}
+
+.trackIcon { font-size: 28px; line-height: 1; }
+
+.trackTitle {
+  font-family: var(--font-cinzel), serif;
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 700;
+  text-align: center;
+}
+
+.trackSub {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  color: var(--stone);
+  font-style: italic;
+  text-align: center;
+}
+
+.trackXP {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold-deep);
+  background: rgba(201, 168, 76, 0.1);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.trackConnector {
+  position: absolute;
+  top: 50%;
+  right: -24px;
+  width: 24px;
+  height: 2px;
+  background: var(--marble-deep);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.connectorActive {
+  background: linear-gradient(90deg, var(--gold), var(--gold-deep));
+}
+
+/* ── Stats Grid ── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.statItem {
+  background: var(--surface-base);
+  border: 1px solid var(--marble-deep);
+  border-radius: 8px;
+  padding: 24px 16px;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.statItem:hover {
+  transform: translateY(-2px);
+  border-color: rgba(201, 168, 76, 0.3);
+}
+
+.statNum {
+  font-family: var(--font-cinzel), serif;
+  font-size: 32px;
+  color: var(--gold-deep);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 11px;
+  color: var(--stone);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+/* Novos estilos para gamificação v2 */
+
+/* ── Report Button ── */
+.reportBtn {
+  font-family: var(--font-cinzel), serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-deep));
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+.reportBtn:hover { transform: translateY(-1px); }
+.reportBtn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.emailMsg {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: var(--gold-deep);
+}
+
+/* ── Milestone Track (1-1000 dias) ── */
+.milestoneTrack {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  padding: 24px 0;
+  scrollbar-width: thin;
+}
+
+.milestoneItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.milestoneDot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--marble-deep);
+  background: var(--surface-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-cinzel), serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--stone-medium);
+  transition: all 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.milestoneReached .milestoneDot {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-deep));
+  border-color: var(--gold);
+  color: var(--ink);
+  box-shadow: 0 0 16px rgba(201, 168, 76, 0.4);
+}
+
+.milestoneCurrent .milestoneDot {
+  border-color: var(--gold);
+  color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.15);
+  animation: pulseMilestone 2s infinite;
+}
+
+@keyframes pulseMilestone {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.15); }
+  50% { box-shadow: 0 0 0 8px rgba(201, 168, 76, 0.05); }
+}
+
+.milestoneLabel {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  color: var(--stone);
+  text-align: center;
+  font-weight: 500;
+}
+
+.milestoneReached .milestoneLabel {
+  color: var(--gold-deep);
+  font-weight: 700;
+}
+
+.milestoneConnector {
+  position: absolute;
+  top: 22px;
+  left: 44px;
+  width: 40px;
+  height: 2px;
+  background: var(--marble-deep);
+  z-index: 1;
+}
+
+.milestoneConnectorActive {
+  background: linear-gradient(90deg, var(--gold), var(--gold-deep));
+}
+
+/* ── Badge Tabs ── */
+.badgeTabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.badgeTab {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--marble-deep);
+  background: var(--surface-base);
+  color: var(--stone);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.badgeTab:hover {
+  border-color: rgba(201, 168, 76, 0.4);
+  color: var(--ink);
+}
+
+.badgeTabActive {
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.15), rgba(201, 168, 76, 0.05));
+  border-color: var(--gold);
+  color: var(--gold-deep);
+  font-weight: 700;
+}
+
+/* ── Badges Grid ── */
+.badgesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.badgeCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--marble-deep);
+  background: var(--surface-base);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.badgeCardEarned {
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.03) 0%, var(--surface-base) 100%);
+}
+
+.badgeCardEarned:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.badgeCardLocked {
+  opacity: 0.5;
+}
+
+.badgeIconWrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.badgeIcon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.badgeInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.badgeRarity {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
+.badgeName {
+  font-family: var(--font-cinzel), serif;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badgeDesc {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  color: var(--stone);
+  line-height: 1.4;
+}
+
+.badgeCheck {
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}

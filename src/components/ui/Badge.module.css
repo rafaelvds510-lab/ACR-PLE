@@ -1,0 +1,35 @@
+/* ════════════════════════════════════════════════
+   BADGE — Acrópole Design System
+   ════════════════════════════════════════════════ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-cinzel), serif;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: var(--radius-xs);
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.badgeIcon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ── VARIANTES POR FASE ── */
+.foundation { background: #EAF3DE; color: #3B6D11; border-color: #97C459; }
+.build      { background: #E6F1FB; color: #185FA5; border-color: #85B7EB; }
+.advanced   { background: #FAEEDA; color: #854F0B; border-color: #EF9F27; }
+.growth     { background: #FAECE7; color: #993C1D; border-color: #F0997B; }
+.scale      { background: #EEEDFE; color: #534AB7; border-color: #AFA9EC; }
+
+/* ── VARIANTES GENÉRICAS ── */
+.gold  { background: var(--gold-pale);  color: var(--gold-deep);  border-color: var(--gold); }
+.stone { background: var(--marble-dark); color: var(--stone-dark); border-color: var(--marble-deep); }

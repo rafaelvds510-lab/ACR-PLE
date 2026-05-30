@@ -1,0 +1,134 @@
+/* ════════════════════════════════════════════════
+   BUTTON — Acrópole Design System
+   ════════════════════════════════════════════════ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0);
+  transition: background var(--transition-fast);
+}
+
+.btn:hover::after {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* ── TAMANHOS ── */
+.sm { font-size: 11px; padding: 6px 14px; }
+.md { font-size: 12px; padding: 9px 22px; }
+.lg { font-size: 14px; padding: 12px 32px; }
+
+/* ── VARIANTES ── */
+
+/* Primary — Dourado */
+.primary {
+  background: var(--gradient-gold);
+  border-color: var(--gold);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.primary:hover {
+  background: linear-gradient(135deg, #F0D48C 0%, #C9A84C 100%);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-1px);
+  border-color: var(--gold-light);
+}
+
+/* Secondary — Pedra */
+.secondary {
+  background: transparent;
+  border-color: var(--marble-deep);
+  color: var(--stone-dark);
+}
+
+.secondary:hover {
+  border-color: var(--gold);
+  background: var(--gold-pale);
+  color: var(--ink);
+}
+
+/* Ghost — Transparente */
+.ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--stone);
+}
+
+.ghost:hover {
+  background: rgba(201, 168, 76, 0.1);
+  color: var(--ink);
+}
+
+/* Danger — Terracota */
+.danger {
+  background: var(--terra-pale);
+  border-color: var(--terra-light);
+  color: var(--terra);
+}
+
+.danger:hover {
+  background: var(--terra);
+  color: var(--marble-light);
+  border-color: var(--terra-deep);
+}
+
+/* ── ESTADOS ── */
+.fullWidth { width: 100%; }
+
+.btn:disabled,
+.loading {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ── ÍCONE ── */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.label { position: relative; z-index: 1; }
+
+/* ── SPINNER ── */
+.spinner {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 2px solid rgba(26, 18, 8, 0.2);
+  border-top-color: var(--ink);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

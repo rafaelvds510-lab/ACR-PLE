@@ -1,0 +1,98 @@
+.agendaContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.title {
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--stone-darker);
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: var(--stone-medium);
+}
+
+.content {
+  display: flex;
+  gap: 24px;
+  flex: 1;
+  min-height: 0; /* Important for scrollable areas inside flex */
+}
+
+/* Agenda Client Styles */
+.calendarWrapper {
+  flex: 1;
+  background-color: var(--stone-lightest);
+  border: 1px solid var(--stone-light);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+/* FullCalendar Customizations to match Cyber-Tech / Greek aesthetics */
+:global(.fc) {
+  --fc-border-color: var(--stone-light);
+  --fc-button-text-color: var(--stone-dark);
+  --fc-button-bg-color: transparent;
+  --fc-button-border-color: var(--stone-light);
+  --fc-button-hover-bg-color: var(--stone-light);
+  --fc-button-hover-border-color: var(--stone-medium);
+  --fc-button-active-bg-color: var(--neon-accent);
+  --fc-button-active-border-color: var(--neon-accent);
+  --fc-button-active-text-color: #fff;
+  --fc-event-bg-color: var(--neon-accent);
+  --fc-event-border-color: transparent;
+  --fc-today-bg-color: rgba(66, 133, 244, 0.05); /* very light neon accent */
+  font-family: inherit;
+  font-size: 18px; /* Aumentado para melhor legibilidade */
+}
+
+:global(.fc-theme-standard th) {
+  border: none;
+  border-bottom: 1px solid var(--stone-light);
+  padding: 12px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--stone-dark);
+}
+
+:global(.fc .fc-toolbar-title) {
+  font-size: 1.5rem; /* Increased title size */
+  font-weight: 600;
+  color: var(--stone-darker);
+}
+
+:global(.fc .fc-button) {
+  border-radius: 6px;
+  text-transform: capitalize;
+  font-weight: 500;
+  padding: 6px 12px;
+  transition: all 0.2s ease;
+}
+
+:global(.fc-event) {
+  border-radius: 4px;
+  padding: 4px 6px; /* Increased padding */
+  font-size: 0.95rem; /* Increased event font size */
+  font-weight: 500;
+  border: none !important;
+  transition: transform 0.2s ease;
+}
+
+:global(.fc-event:hover) {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

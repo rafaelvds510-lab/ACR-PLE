@@ -1,0 +1,54 @@
+.editorContainer {
+  background-color: var(--stone-lightest);
+  border: 1px solid var(--stone-light);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-weight: 600;
+  color: var(--stone-darker);
+  font-size: 14px;
+}
+
+.saveBtn {
+  background-color: var(--neon-accent);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.importerContainer {
+  border: 2px dashed var(--stone-light);
+  border-radius: 12px;
+  padding: 48px 24px;
+  text-align: center;
+  transition: border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.importerContainer:hover {
+  border-color: var(--neon-accent);
+}
+
+.importTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--stone-darker);
+  margin-bottom: 8px;
+}
+
+.importDesc {
+  font-size: 14px;
+  color: var(--stone-medium);
+}

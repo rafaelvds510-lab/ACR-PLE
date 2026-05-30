@@ -1,0 +1,74 @@
+.editorContainer {
+  border: 1px solid var(--stone-light);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  display: flex;
+  gap: 4px;
+  padding: 8px;
+  background-color: var(--stone-lightest);
+  border-bottom: 1px solid var(--stone-light);
+  flex-wrap: wrap;
+}
+
+.toolbarBtn {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--stone-dark);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.toolbarBtn:hover {
+  background-color: var(--stone-light);
+}
+
+.toolbarBtn.active {
+  background-color: var(--stone-light);
+  color: var(--neon-accent);
+  border-color: var(--stone-medium);
+}
+
+.divider {
+  width: 1px;
+  background-color: var(--stone-light);
+  margin: 0 4px;
+}
+
+.editorBody {
+  padding: 12px;
+  background-color: #fff;
+  min-height: 150px;
+  cursor: text;
+}
+
+/* TipTap default styles reset inside our container */
+.editorContent {
+  outline: none;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--stone-darker);
+}
+
+.editorContent p {
+  margin-bottom: 8px;
+}
+
+.editorContent h2 {
+  font-size: 1.25em;
+  margin: 16px 0 8px;
+  font-weight: 600;
+}
+
+.editorContent ul {
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
