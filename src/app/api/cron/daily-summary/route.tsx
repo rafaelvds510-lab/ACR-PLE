@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import * as React from 'react';
 import { DailySummaryEmail } from '@/components/emails/DailySummaryEmail';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -19,16 +20,16 @@ export async function GET(req: Request) {
       from: 'Acropole <onboarding@resend.dev>',
       to: 'rafaelvds510@gmail.com',
       subject: 'Seu Resumo Diário de Estudos - Acrópole',
-      react: DailySummaryEmail({ 
-        userName: 'Rafael', 
-        date: new Date().toLocaleDateString('pt-BR'),
-        stats: {
+      react: <DailySummaryEmail 
+        userName="Rafael"
+        date={new Date().toLocaleDateString('pt-BR')}
+        stats={{
           studyHours: 4,
           flashcards: 25,
           arguments: 3,
           threads: 1
-        }
-      }),
+        }}
+      />,
     });
 
     if (error) {
