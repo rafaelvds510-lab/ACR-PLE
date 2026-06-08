@@ -1,9 +1,7 @@
-import dynamic from 'next/dynamic';
 import { createClient } from '@/lib/supabase/server';
 import { redirect } from 'next/navigation';
 import { Node, Edge } from '@xyflow/react';
-
-const XMindEditor = dynamic(() => import('./XMindEditor'), { ssr: false });
+import XMindEditor from './XMindEditorNoSSR';
 
 export const metadata = {
   title: 'Editor de Mapa Mental | Acrópole',

@@ -1,11 +1,9 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
 import { createClient } from '@/lib/supabase/server';
 import { getSignedDocumentUrl } from '@/app/actions/library';
+import DocumentViewer from '@/components/biblioteca/DocumentViewerNoSSR';
+import FichamentoEditor from '@/components/biblioteca/FichamentoEditorNoSSR';
 import Link from 'next/link';
-
-const DocumentViewer = dynamic(() => import('@/components/biblioteca/DocumentViewer'), { ssr: false });
-const FichamentoEditor = dynamic(() => import('@/components/biblioteca/FichamentoEditor'), { ssr: false });
 
 export default async function LeitorPage(
   props: {
