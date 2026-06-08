@@ -1,7 +1,9 @@
+import dynamic from 'next/dynamic';
 import { createClient } from '@/lib/supabase/server';
 import { redirect } from 'next/navigation';
-import AgendaClient from './AgendaClient';
 import styles from './agenda.module.css';
+
+const AgendaClient = dynamic(() => import('./AgendaClient'), { ssr: false });
 
 export const metadata = {
   title: 'Agenda de Estudos | Acrópole',

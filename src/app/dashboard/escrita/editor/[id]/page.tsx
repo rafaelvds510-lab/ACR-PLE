@@ -1,7 +1,9 @@
+import dynamic from 'next/dynamic';
 import { createClient } from '@/lib/supabase/server';
 import { redirect } from 'next/navigation';
-import WritingEditor from './WritingEditor';
 import { TemplateId } from './components/templates';
+
+const WritingEditor = dynamic(() => import('./WritingEditor'), { ssr: false });
 
 export const metadata = { title: 'Editor de Escrita | Acrópole' };
 
